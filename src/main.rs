@@ -8,25 +8,12 @@ use ccextractor::ccextractor::*;
 //キャメルに統一します
 //constなら意味があるけど、ないならグローバル変数を直接いじるだけで良いのでは？
 
-
-fn main() {
+fn main()
+{
     let args: Vec<String> = env::args().collect(); // get input as command arguments
 
     ccextractor(args);
 
-    // // setlocale(LC_ALL, ""); // Supports non-English CCs
-    // //外部関数のためどうすればいいのかよくわからん
-    //
-    // let api_options:ccx_s_options = ccx_s_options::new();
-    // //グローバル変数はRustの流儀にあってないため使わない
-    // //名前がキャメルケース推奨
-    //
-    // parse_configuration(&api_options);
-    // // If "ccextractor.cnf" is present, takes options from it.
-    // // See docs/ccextractor.cnf.sample for more info.
-    //
-    // let compile_ret:isize = parse_parameters(&api_options, args);
-    //
     // match compile_ret {
     //      EXIT_NO_INPUT_FILES => {
     //         println!("No Input");
