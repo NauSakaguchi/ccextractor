@@ -6,10 +6,10 @@ License: GPL 2.0
 use std::env;
 use ccextractor::ccextractor::*;
 
+//call ccextractor.rs here which works like ccextractor.c / .h
 
 /**memo**/
-//camel case or snake case?
-//call ccextractor.rs here which works like ccextractor.c / .h
+//ccx_options (global variable in C program)
 
 fn main()
 {

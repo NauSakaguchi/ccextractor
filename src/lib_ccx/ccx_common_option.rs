@@ -1,17 +1,17 @@
 pub struct ccx_s_options
 {
-    test: isize
+   test: i32
 }
 
 impl ccx_s_options
 {
-    pub fn new() -> ccx_s_options
+    pub fn new() -> Self
     {
-        let ccx_s_options = Self
+        let ccx_options:ccx_s_options = Self
         {
             test: 10
         };
-        ccx_s_options
+        ccx_options
     }
 
 }
