@@ -7,7 +7,7 @@ use std::process::exit;
 pub fn ccextractor(args: Vec<String>)
 {
     // setlocale(LC_ALL, ""); // Supports non-English CCs
-    //外部関数のためどうすればいいのかよくわからん
+    //need to test later (see the documentation)
 
     let api_options:ccx_s_options = ccx_s_options::new(); //unimplemented!()
     //グローバル変数はRustの流儀にあってないため使わない
@@ -17,12 +17,12 @@ pub fn ccextractor(args: Vec<String>)
     // If "ccextractor.cnf" is present, takes options from it.
     // See docs/ccextractor.cnf.sample for more info.
 
-    let compile_ret:isize = parse_parameters(&api_options, args); //unimplemented!()
+    let compile_ret:i32 = parse_parameters(&api_options, args); //unimplemented!()
 
     if compile_ret == EXIT_NO_INPUT_FILES
     {
         println!("No Input"); //temp
-        exit(compile_ret as i32); //temp
+        exit(compile_ret); //temp
         // print_usage();
         // fatal(EXIT_NO_INPUT_FILES, "(This help screen was shown because there were no input files)\n");
     }
@@ -34,7 +34,7 @@ pub fn ccextractor(args: Vec<String>)
     else if compile_ret != EXIT_OK
     {
         println!("NOT EIXT_OK"); // temp
-        exit(compile_ret as i32);
+        exit(compile_ret);
     }
 
     println!("EIXT_OK"); //temp
