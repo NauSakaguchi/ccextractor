@@ -8,8 +8,13 @@ use ccextractor::ccextractor::*;
 
 //call ccextractor.rs here which works like ccextractor.c / .h
 
-/**memo**/
+/*memo*/
 //ccx_options (global variable in C program)
+//
+//the structure of directory (suggestion) (Refactor)
+//lib_ccx - header - ccx_common_options.rs (ccx_common_options.h)
+//        |
+//        - body - ccx_common_options.rs (ccx_common_options.c)
 
 fn main()
 {
